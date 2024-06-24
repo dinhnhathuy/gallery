@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$media-breakpoints: map.merge((), $grid-breakpoints);
+
+@mixin media-query($breakpoint: 'xs', $mode: 'mobile-first', $breakpoints: $media-breakpoints) {
+  $media: map-get($map: $breakpoints, $key: $breakpoint);
+
+  @if $mode =='mobile-first' {
+    @media (max-width: $media) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $media) {
+      @content;
+    }
+  }
+}

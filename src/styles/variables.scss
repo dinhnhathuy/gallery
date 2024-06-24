@@ -1,0 +1,15 @@
+@use 'sass:map';
+
+// Grid
+$grid-breakpoints: (
+  xxl: 2560px,
+  xl: 1280px,
+  lg: 1024px,
+  md: 768px,
+  sm: 576px,
+  xs: 480px,
+  xxs: 375px,
+) !default;
+
+// image
+$image-ratio: 66.7%
