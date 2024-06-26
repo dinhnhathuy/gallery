@@ -1,7 +1,12 @@
 .navbar {
-  padding: 2rem 1rem;
+  padding: 0 1rem;
   background: $bg-color;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   &__items {
+    height: 100px;
     max-width: $screen-xl;
     margin: 0 auto;
     display: flex;

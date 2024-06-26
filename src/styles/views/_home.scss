@@ -2,6 +2,6 @@
   max-width: $screen-xl;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;
+  margin-top: calc(100px + 3rem);
   padding: .5rem;
 }

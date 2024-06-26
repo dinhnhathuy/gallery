@@ -1,16 +1,23 @@
 <template>
-  <figure class="">
-    <div class="image-wrapper" :style="`padding-bottom: ${100 / aspectRatio}%`">
+  <figure class="image">
+    <div :class="['image-wrapper', `${preview && 'preview'}`]" :style="`padding-bottom: ${100 / aspectRatio}%`">
+      <img
+        v-if="preview"
+        src="/icons/path.svg"
+        class="icon-preview"
+        width="20px"
+        height="20px"
+      />
+      
       <img
         loading="lazy"
         :src="imgSrc"
         :alt="alt"
         @load="onImageLoad($event)"
         @error="onImageError($event)"
-        class="image"
       />
     </div>
-    <figcaption v-if="caption">{{  caption }}</figcaption>
+    <figcaption v-if="caption"><span class="truncate">{{ caption }}</span></figcaption>
   </figure>
 </template>
 
@@ -33,6 +40,10 @@ const props = defineProps({
   aspectRatio: {
     type: Number,
     default: 16 / 9,
+  },
+  preview: {
+    type: Boolean,
+    default: false,
   }
 });
 
@@ -40,11 +51,6 @@ const loaded = ref(false)
 const errorSrc = ref('')
 
 const imgSrc = computed(() => {
-  console.log({
-    props,
-    img: props.src,
-    errorSrc: errorSrc.value
-  })
   if(!!errorSrc.value) return errorSrc.value
   return props.src
 })
