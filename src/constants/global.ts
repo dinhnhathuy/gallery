@@ -1,0 +1,1 @@
+export const IMAGE_ERROR = '/images/empty_img.jpg'

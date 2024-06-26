@@ -1,8 +1,20 @@
 <template>
-  <nav class="main-navbar">
-    <ul class="items">
-      <li class="item"></li>
-      <li class="item"></li>
+  <nav class="navbar">
+    <ul class="navbar__items">
+      <li class="navbar__item">
+        <img src="/logo.png" width="80px" alt="logo">
+      </li>
+      <li class="navbar__item">
+        <ul class="navbar__menu">
+          <li v-for="(item, key) in navbars" :key="item" class="navbar__menu-item">
+            <a :href="item.link">{{ item.name }}</a>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </template>
+
+<script setup>
+import { navbars } from '@/content/global';
+</script>

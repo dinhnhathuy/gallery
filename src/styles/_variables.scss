@@ -11,5 +11,12 @@ $grid-breakpoints: (
   xxs: 375px,
 ) !default;
 
+// breakpoints
+$screen-xl: 1280px;
+
 // image
-$image-ratio: 66.7%
+$image-ratio: 66.7%;
+
+// colors
+$primary-color: #FC6020;
+$bg-color: #F3EEE2;

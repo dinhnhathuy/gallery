@@ -1,0 +1,40 @@
+.navbar {
+  padding: 2rem 1rem;
+  background: $bg-color;
+  &__items {
+    max-width: $screen-xl;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {}
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    li {
+      padding: .5rem 1rem;
+      border-radius: .5rem;
+      border: 1px solid $primary-color;
+      transition-property: border, background-color;
+    }
+    a {
+      transition-property: color;
+    }
+    li:hover {
+      a {
+        color: #fff;
+      }
+      border: 1px solid $primary-color;
+      background-color: $primary-color;
+    }
+
+    li, a {
+      transition-duration: .3s;
+      transition-timing-function: ease;
+    }
+  }
+}

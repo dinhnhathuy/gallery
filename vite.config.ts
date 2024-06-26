@@ -14,7 +14,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        prependData: `@import "@/styles/variables.scss";`
+        prependData: `@forward "@/styles/variables";`
       }
     }
   },
