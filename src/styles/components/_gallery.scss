@@ -77,3 +77,20 @@ figure.image {
     }
   }
 }
+
+@keyframes animateCell {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery .gallery__item {
+  animation: animateCell 600ms ease-out;
+  @include animationDelay;
+  animation-fill-mode: backwards;
+}

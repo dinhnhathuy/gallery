@@ -7,7 +7,7 @@
       <li class="navbar__item">
         <ul class="navbar__menu">
           <li v-for="(item, key) in navbars" :key="item" class="navbar__menu-item">
-            <a :href="item.link">{{ item.name }}</a>
+            <RouterLink :href="item.link">{{ item.name }}</RouterLink>
           </li>
         </ul>
       </li>

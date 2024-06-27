@@ -1,0 +1,7 @@
+@mixin animationDelay {
+  @for $i from 1 through 40 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 100}ms;
+    }
+  }
+}
